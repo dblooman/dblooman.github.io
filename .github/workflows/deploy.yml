@@ -4,7 +4,7 @@ on:
     # Trigger the workflow every time you push to the `main` branch
     # Replace `main` with `master` if you're using the older default branch name
     push:
-        branches: [main]
+        branches: [master]
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
