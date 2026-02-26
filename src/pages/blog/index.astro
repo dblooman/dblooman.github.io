@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import "../../styles/global.css";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <style>
+      .blog-card {
+        transition: all 0.3s ease;
+      }
+      .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <Header />
+
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div>
+          <h1
+            class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4"
+          >
+            All Articles
+          </h1>
+          <p class="text-xl text-gray-600">
+            {posts.length} articles about infrastructure, cloud, and engineering
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          posts.map((post) => (
+            <a
+              href={`/blog/${post.id}/`}
+              class="blog-card group block h-full rounded-xl border border-gray-200 bg-white p-6 hover:border-blue-300"
+            >
+              <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
+                {post.data.title}
+              </h3>
+              <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                {post.data.description}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  {post.data.pubDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+                <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>

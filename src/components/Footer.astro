@@ -1,0 +1,61 @@
+---
+const today = new Date();
+---
+
+<footer class="border-t border-gray-200 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-3 mb-8">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Site</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="/blog" class="hover:text-gray-900 transition-colors"
+              >Blog</a>
+          </li>
+          <li>
+            <a href="/about" class="hover:text-gray-900 transition-colors"
+              >About</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Connect</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>
+            <a
+              href="https://github.com/dblooman"
+              target="_blank"
+              class="hover:text-gray-900 transition-colors">GitHub</a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/dblooman"
+              target="_blank"
+              class="hover:text-gray-900 transition-colors">Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Built with</h3>
+        <p class="text-sm text-gray-600">
+          <a
+            href="https://astro.build"
+            target="_blank"
+            class="hover:text-gray-900 transition-colors">Astro</a
+          > &amp; <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            class="hover:text-gray-900 transition-colors">Tailwind CSS</a>
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 pt-8">
+      <p class="text-center text-sm text-gray-600">
+        &copy; {today.getFullYear()} David Blooman. Built with Astro.
+      </p>
+    </div>
+  </div>
+</footer>

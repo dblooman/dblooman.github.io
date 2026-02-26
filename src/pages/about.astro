@@ -1,0 +1,131 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE } from "../consts";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`About | ${SITE_TITLE}`}
+      description="Platform engineer with experience building infrastructure and distributed systems"
+    />
+  </head>
+  <body class="bg-white">
+    <Header />
+
+    <main>
+      <!-- Hero Section -->
+
+      <!-- Content Section -->
+      <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none">
+          <h2>About Me</h2>
+          <p>
+            I'm a software engineer with a passion for building scalable systems
+            and developer tools. Over the past 15 years, I've worked across
+            infrastructure, platform engineering, and full-stack development.
+            I'm experienced in designing cloud architectures, building APIs, and
+            creating developer experiences that make teams more efficient.
+          </p>
+
+          <h2>Experience</h2>
+
+          <h3>Dojo - Senior Software Engineer (Aug 2025 - Present)</h3>
+          <p>
+            Currently building payment infrastructure and developer tools at
+            Dojo, working on scalable systems for payment processing.
+          </p>
+
+          <h3>Loveholidays - Senior Software Engineer (Jul 2024 - Jul 2025)</h3>
+          <p>
+            Developed Golang services on Google Cloud to integrate with
+            third-party data suppliers. Improved data ingest and storage in
+            BigQuery for enhanced efficiency. Collaborated with cross-functional
+            teams to optimize data processing workflows.
+          </p>
+
+          <h3>Keel - Software Engineer (Apr 2022 - Oct 2023)</h3>
+          <p>
+            As a founding engineer, I was instrumental in delivering a low-code
+            managed solution that transforms human-readable schemas into fully
+            hosted GraphQL APIs with PostgreSQL. Designed the platform
+            architecture supporting cloud-based hosting for thousands of
+            customers using serverless and container technologies. <strong
+              >Technologies:</strong
+            > Golang, GraphQL, AWS Fargate, Lambda, EventBridge, React.
+          </p>
+
+          <h3>Vitrolic - Founder (Jan 2021 - Feb 2022)</h3>
+          <p>
+            Built and launched a social calendar app for groups to discover new
+            meeting places. Developed using React Native for both iOS and
+            Android, with integrations for Foursquare, Google Location, and
+            Ticketmaster APIs. <strong>Technologies:</strong> React Native, Golang,
+            Firebase, Terraform, AWS Fargate.
+          </p>
+
+          <h3>Depop - Lead Software Engineer (Sep 2019 - Dec 2020)</h3>
+          <p>
+            Led the Developer Experience team, creating tools and services to
+            enhance developer efficiency. Implemented Kafka on AWS and developed
+            Kubernetes services for platform visibility. <strong
+              >Technologies:</strong
+            > Golang, Kafka, React.js, Kubernetes, AWS.
+          </p>
+
+          <h3>Depop - Platform Engineer (Nov 2017 - Aug 2019)</h3>
+          <p>
+            Introduced Kubernetes to the platform team, supporting over 100
+            microservices. Developed consistent deployment strategies across
+            environments. <strong>Technologies:</strong> Kubernetes, Golang, Jenkins,
+            AWS.
+          </p>
+
+          <h3>FundApps - Infrastructure Engineer (2016 - 2017)</h3>
+          <p>
+            Worked on infrastructure projects, focusing on cloud architecture
+            and deployment automation.
+          </p>
+
+          <h3>BBC News - Senior Developer (2011 - 2016)</h3>
+          <p>
+            Developed and maintained news applications, contributing to the
+            BBC's digital presence.
+          </p>
+
+          <h2>Skills</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div>
+              <h4 class="font-semibold mb-2">Languages</h4>
+              <p class="text-gray-600">
+                Golang, JavaScript/TypeScript, React, Python, Bash
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Cloud & Infrastructure</h4>
+              <p class="text-gray-600">
+                AWS, Google Cloud, Kubernetes, Terraform, Docker, Fargate
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Data & APIs</h4>
+              <p class="text-gray-600">
+                GraphQL, PostgreSQL, BigQuery, Kafka, EventBridge
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">DevOps & Tools</h4>
+              <p class="text-gray-600">
+                Jenkins, GitHub Actions, React Native, Serverless
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

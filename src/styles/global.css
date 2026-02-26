@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+	--accent: #2563eb;
+	--accent-dark: #1e40af;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: #374151;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+main {
+	min-height: 60vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: #111827;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.875rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	color: var(--accent-dark);
+	text-decoration: underline;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.prose p {
+	margin-bottom: 1.5em;
+	line-height: 1.8;
+}
+
+textarea,
+input {
+	font-size: 16px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+code {
+	padding: 2px 6px;
+	background-color: #f3f4f6;
+	border-radius: 4px;
+	font-family: 'Monaco', 'Courier New', monospace;
+	font-size: 0.9em;
+}
+
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
+	background-color: #1f2937;
+	color: #f3f4f6;
+	overflow-x: auto;
+	margin: 1.5em 0;
+	line-height: 1.4;
+}
+
+pre code {
+	padding: 0;
+	background-color: transparent;
+	color: inherit;
+}
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 1.5em 0;
+	font-style: italic;
+	color: #6b7280;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #e5e7eb;
+	margin: 2em 0;
+}
+
+@media (max-width: 720px) {
+	h1 {
+		font-size: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
